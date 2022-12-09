@@ -6,6 +6,7 @@ function gridMain() {
     function elmStyleColor(elm, colorProp) {
         assignCssProp(elm, {"background-color": colorProp});
         elmListener(grid, "mouseover", colorDiv);
+        removeListener(grid, "mouseover", colorDiv);
     }
 
     function colorDiv(evt) {
