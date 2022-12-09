@@ -8,3 +8,7 @@
     margin: auto;
     box-sizing: border-box;
 }
+
+.grid__row {
+    height: 100%;
+}
