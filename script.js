@@ -3,7 +3,7 @@ function gridMain() {
     const button_array = document.querySelectorAll("button");
 
     function assignCssProp(elm, cssProp) {
-
+        Object.assign(elm.style, cssProp);
     }
 
     function createGrid(setValue_int = 16) {
