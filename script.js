@@ -25,6 +25,8 @@ function gridMain() {
 
         if (elm.textContent === "Default")
             elmStyleColor(elm, "#000");
+        else if (elm.textContent === "Random")
+            elmStyleColor(elm)
     }
 
     function elmListener(elm, evtName, func) {
@@ -49,6 +51,6 @@ function gridMain() {
             }
         }
 
-        elmListener(grid, "mousedown", colorDiv);
+        elmListener(grid, "mousedown", colorDiv, "#000");
     }
 }
