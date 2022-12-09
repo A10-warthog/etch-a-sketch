@@ -29,6 +29,6 @@ function gridMain() {
             }
         }
 
-        elmListener(grid, colorDiv);
+        elmListener(grid, "mousedown", colorDiv);
     }
 }
