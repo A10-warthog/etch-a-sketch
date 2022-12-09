@@ -6,6 +6,9 @@ function gridMain() {
     function colorDiv(evt) {
         const elm = evt.target;
         evt.preventDefault();
+
+        if (elm.textContent === "Default")
+            elmStyleColor(elm, "#000");
     }
 
     function elmListener(elm, evtName, func) {
