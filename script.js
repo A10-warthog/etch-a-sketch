@@ -3,6 +3,10 @@ function gridMain() {
     const button_array = document.querySelectorAll("button");
     const defaultName = grid.previousElementSibling.textContent;
     
+    function colorDiv(evt) {
+
+    }
+
     function elmListener(elm, evtName, func) {
         elm.addEventListener(evtName, func);
     }
