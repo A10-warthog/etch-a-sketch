@@ -4,7 +4,9 @@ function gridMain() {
     const defaultName = grid.previousElementSibling.textContent;
     
     function removeListener(elm, evtName, func) {
-        
+        window.addEventListener("mouseup", () => {
+            elm.removeEventListener(evtName, func);
+        })
     }
 
     function elmStyleColor(elm, colorProp) {
