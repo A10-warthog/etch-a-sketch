@@ -8,7 +8,7 @@ function gridMain() {
 
     function createGrid(setValue_int = 16) {
         const gridWidth_int = grid.offsetWidth / 16;
-        const xHeightOrWidth_int = gridSquare_int / setValue_int;
+        const xValue_int = gridSquare_int / setValue_int;
         for(let i = 0; i < setValue; i++) {
             const row = document.createElement("div");
             row.classList.add("grid__row");
@@ -16,7 +16,6 @@ function gridMain() {
             for (let j = 0; j < setValue; j++) {
                 const item = document.createElement("div");
                 item.classList.add("row__item");
-
             }
         }
     }
