@@ -9,6 +9,11 @@ function gridMain() {
     function createGrid(setValue_int = 16) {
         const gridWidth_int = grid.offsetWidth / 16;
         const xValue_int = gridSquare_int / setValue_int;
+        const cssProp = {
+            height: xValue_int +"rem",
+            width: this.height
+        }
+        
         for(let i = 0; i < setValue; i++) {
             const row = document.createElement("div");
             row.classList.add("grid__row");
