@@ -19,7 +19,7 @@ function gridMain() {
         removeListener(grid, "mouseover", colorDiv);
     }
 
-    function colorDiv(evt) {
+    function colorDiv(evt, propName) {
         const elm = evt.target;
         evt.preventDefault();
 
