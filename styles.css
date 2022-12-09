@@ -5,4 +5,6 @@
 .grid__body {
     height: 30rem;
     width: 30rem;
+    margin: auto;
+    box-sizing: border-box;
 }
