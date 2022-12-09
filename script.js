@@ -10,6 +10,7 @@ function gridMain() {
             grid.appendChild(row);
             for (let j = 0; j < setValue; j++) {
                 const item = document.createElement("div");
+                item.classList.add("row__item");
             }
         }
     }
