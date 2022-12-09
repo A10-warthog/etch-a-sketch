@@ -2,7 +2,7 @@ function gridMain() {
     const grid = document.querySelector(".grid__body");
     const button_array = document.querySelectorAll("button");
 
-    function assignCssProp() {
+    function assignCssProp(elm, cssProp) {
 
     }
 
@@ -13,7 +13,7 @@ function gridMain() {
             height: xValue_int +"rem",
             width: this.height
         }
-        
+
         for(let i = 0; i < setValue; i++) {
             const row = document.createElement("div");
             row.classList.add("grid__row");
