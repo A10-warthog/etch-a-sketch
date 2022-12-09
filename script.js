@@ -3,6 +3,10 @@ function gridMain() {
     const button_array = document.querySelectorAll("button");
     const defaultName = grid.previousElementSibling.textContent;
     
+    function removeListener(elm, evtName, func) {
+        
+    }
+
     function elmStyleColor(elm, colorProp) {
         assignCssProp(elm, {"background-color": colorProp});
         elmListener(grid, "mouseover", colorDiv);
