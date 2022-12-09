@@ -3,6 +3,10 @@ function gridMain() {
     const button_array = document.querySelectorAll("button");
     const defaultName = grid.previousElementSibling.textContent;
     
+    function assignCssProp(elm, cssProp) {
+        Object.assign(elm.style, cssProp);
+    }
+
     function removeListener(elm, evtName, func) {
         window.addEventListener("mouseup", () => {
             elm.removeEventListener(evtName, func);
@@ -27,10 +31,6 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
     
-    function assignCssProp(elm, cssProp) {
-        Object.assign(elm.style, cssProp);
-    }
-
     function createGrid(setValue_int = 16) {
         const gridWidth_int = grid.offsetWidth / 16;
         const xValue_int = gridWidth_int / setValue_int;
