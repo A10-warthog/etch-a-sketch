@@ -3,6 +3,10 @@ function gridMain() {
     const button_array = document.querySelectorAll("button");
     const defaultName = grid.previousElementSibling.textContent;
     
+    function elmStyleColor(elm, color) {
+        
+    }
+
     function colorDiv(evt) {
         const elm = evt.target;
         evt.preventDefault();
