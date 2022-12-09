@@ -23,5 +23,7 @@ function gridMain() {
                 assignCssProp(item, cssProp);
             }
         }
+
+        elmListener(grid, colorDiv);
     }
 }
