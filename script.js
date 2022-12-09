@@ -9,7 +9,7 @@ function gridMain() {
             row.classList.add("grid__row");
             grid.appendChild(row);
             for (let j = 0; j < setValue; j++) {
-
+                const item = document.createElement("div");
             }
         }
     }
