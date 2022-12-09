@@ -4,6 +4,7 @@ function gridMain() {
     const defaultName = grid.previousElementSibling.textContent;
     
     function colorDiv(evt) {
+        const elm = evt.target;
         evt.preventDefault();
     }
 
