@@ -7,6 +7,7 @@ function gridMain() {
         for(let i = 0; i < setValue; i++) {
             const row = document.createElement("div");
             row.classList.add("grid__row");
+            grid.appendChild(row);
             for (let j = 0; j < setValue; j++) {
 
             }
