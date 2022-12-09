@@ -22,11 +22,6 @@ function gridMain() {
     function colorDiv(evt, propName) {
         const elm = evt.target;
         evt.preventDefault();
-
-        if (elm.textContent === "Default")
-            elmStyleColor(elm, "#000");
-        else if (elm.textContent === "Random")
-            elmStyleColor(elm)
     }
 
     function elmListener(elm, evtName, func) {
