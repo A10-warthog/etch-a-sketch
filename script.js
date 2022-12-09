@@ -21,6 +21,7 @@ function gridMain() {
             for (let j = 0; j < setValue; j++) {
                 const item = document.createElement("div");
                 item.classList.add("row__item");
+                assignCssProp(item, cssProp);
             }
         }
     }
