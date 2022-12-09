@@ -3,8 +3,8 @@ function gridMain() {
     const button_array = document.querySelectorAll("button");
     const defaultName = grid.previousElementSibling.textContent;
     
-    function elmStyleColor(elm, color) {
-        
+    function elmStyleColor(elm, colorProp) {
+        assignCssProp(elm, colorProp)
     }
 
     function colorDiv(evt) {
