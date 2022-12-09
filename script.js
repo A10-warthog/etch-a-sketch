@@ -4,6 +4,9 @@ function gridMain() {
     const defaultName = grid.previousElementSibling.textContent;
     
     function elmStyleColor(elm, colorProp) {
+        const valueProp = {
+            "background-color": colorProp, 
+        }
         assignCssProp(elm, colorProp)
     }
 
