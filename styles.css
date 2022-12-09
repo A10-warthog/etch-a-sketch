@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+.container_grid {
+    width: 30rem;
+    height: 30rem;
+    margin: auto;
+}
+
 .grid__body {
     height: 100%;
     width: 100%;
