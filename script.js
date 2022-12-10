@@ -38,6 +38,8 @@ function gridMain() {
 
     function resizeGrid() {
         const inputValue = Number(document.querySelector(".grid_input").value);
+        if (inputValue > 10 && inputValue < 100)
+            removeGrid(inputValue);
     }
 
     function divModify(evt) {
