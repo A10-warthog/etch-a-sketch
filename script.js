@@ -39,7 +39,7 @@ function gridMain() {
     function resizeGrid() {
 
         function removeGrid(inputValue) {
-            
+            const gridRow = grid.children;
         } 
 
         const inputValue = Number(document.querySelector(".grid_input").value);
