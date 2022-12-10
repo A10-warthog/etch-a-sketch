@@ -37,16 +37,15 @@ function gridMain() {
     }
 
     function resizeGrid() {
-
         function removeGrid() {
             const gridRow = grid.children;
             gridRow.forEach(row => row.remove());
             createGrid(inputValue);
         } 
-
         const inputValue = Number(document.querySelector(".grid_input").value);
+
         if(inputValue > 10 && inputValue < 100)
-            removeGrid(inputValue);
+            removeGrid();
         else 
             console.log("Enter input value between 10 & 100");
         return "#000";
