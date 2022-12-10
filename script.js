@@ -24,6 +24,10 @@ function gridMain() {
         return `hsl(${hue}, 100%, 50%)`;
     }
 
+    function clearGrid() {
+        
+    }
+
     function colorDiv(evt) {
         let propName = colorName;
         const elm = evt.target;
