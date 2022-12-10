@@ -44,7 +44,9 @@ function gridMain() {
         else if (propName === "Clear") {
             clearGrid();
             propName = "#000";
-        } 
+        } else if (propName === "Resize") {
+            propName = resizeGrid();
+        }
 
        elmStyleColor(elm, propName);    
     }
