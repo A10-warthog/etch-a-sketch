@@ -9,6 +9,11 @@
     margin: auto;
 }
 
+.container_grid--shadow {
+    box-shadow: 1px 0px 1px #9999,
+    0px 1px 1px #9999;
+}
+
 .grid__body {
     height: 100%;
     width: 100%;
