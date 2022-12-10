@@ -57,6 +57,9 @@ function gridMain() {
                 case "Default":
                     propName = "#000";
                     break;
+                case "Eraser":
+                    propName = "#000";
+                    break;
             }
         }
             
