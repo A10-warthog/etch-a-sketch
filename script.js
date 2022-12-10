@@ -36,12 +36,16 @@ function gridMain() {
         let propName = colorName;
         const elm = evt.target;
         evt.preventDefault();
+        //check button's textContent
         if (propName === "Random")
            propName = randomColor();
+        else if (propName === "Eraser")
+            propName = grid.style.backgroundColor;
         else if (propName === "Clear") {
             clearGrid();
             propName = "#000";
         } 
+
        elmStyleColor(elm, propName);    
     }
 
