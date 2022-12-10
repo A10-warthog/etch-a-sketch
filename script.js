@@ -66,10 +66,7 @@ function gridMain() {
     }
 
     function elmListener(elm, evtName, func, btnTxt) {
-        if (btnTxt !== undefined)
-            colorName = btnTxt;
-        else    
-            colorName = "#000";
+        colorName = btnTxt;
         elm.addEventListener(evtName, func);
     }
     
