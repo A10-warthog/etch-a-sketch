@@ -48,8 +48,9 @@ function gridMain() {
             const [...gridRow] = grid.children;
             gridRow.forEach(row => row.remove());
             createGrid(inputValue);
+            gridInput.value = '';
         }
-        
+
         if(inputValue >= 10 && inputValue <= 100)
             removeGrid();
         else 
