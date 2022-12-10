@@ -20,7 +20,6 @@ function gridMain() {
     }
 
     function colorDiv(evt) {
-        const elm = evt.target;
         evt.preventDefault();
     }
 
