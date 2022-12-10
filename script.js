@@ -1,8 +1,4 @@
 function gridMain() {
-    const grid = document.querySelector(".grid__body");
-    const button_array = document.querySelectorAll("button");
-    const colorName = grid.previousElementSibling.textContent;
-    
     function assignCssProp(elm, cssProp) {
         Object.assign(elm.style, cssProp);
     }
@@ -95,4 +91,9 @@ function gridMain() {
 
         elmListener(grid, "mousedown", divModify);
     }
+
+    const grid = document.querySelector(".grid__body");
+    const button_array = document.querySelectorAll("button");
+    const colorName = grid.previousElementSibling.textContent;
+    
 }
