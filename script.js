@@ -63,7 +63,7 @@ function gridMain() {
        elmStyleColor(elm, propName);    
     }
 
-    function elmListener(evt, elm, evtName, func, btnTxt) {
+    function elmListener(elm, evtName, func, btnTxt) {
         if (btnTxt !== undefined)
             colorName = btnTxt;
         else    
@@ -71,6 +71,11 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
     
+    function gridListener(evt) {
+        const btnTxt = evt.target.textContent;
+        elmListener(grid, "mousedown", divModify, btnTxt)
+    }
+
     function createGrid(setValue_int = 16) {
         const gridWidth_int = grid.offsetWidth / 16;
         const xValue_int = gridWidth_int / setValue_int;
@@ -90,11 +95,6 @@ function gridMain() {
         }
 
         elmListener(grid, "mousedown", divModify);
-    }
-
-    function gridListener(evt) {
-        const btnTxt = evt.target.textContent;
-        elmListener(grid, "mousedown", divModify, btnTxt)
     }
 
     const grid = document.querySelector(".grid__body");
