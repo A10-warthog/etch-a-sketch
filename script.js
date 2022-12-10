@@ -21,6 +21,7 @@ function gridMain() {
 
     function randomColor() {
         const hue = Math.floor(Math.random() * 255);
+        return `hsl(${hue}, 100%, 50%)`;
     }
 
     function colorDiv(evt) {
