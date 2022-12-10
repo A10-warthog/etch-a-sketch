@@ -95,6 +95,7 @@ function gridMain() {
                 const item = document.createElement("div");
                 item.classList.add("row__item");
                 assignCssProp(item, cssProp);
+                row.appendChild(item);
             }
         }
 
