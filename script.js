@@ -92,6 +92,11 @@ function gridMain() {
         elmListener(grid, "mousedown", divModify);
     }
 
+    function gridListener(evt) {
+        const btnTxt = evt.target.textContent;
+        elmListener(grid, "mousedown", divModify)
+    }
+
     const grid = document.querySelector(".grid__body");
     const button_array = document.querySelectorAll("button");
     const colorName = grid.previousElementSibling.textContent;
