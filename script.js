@@ -65,8 +65,8 @@ function gridMain() {
        elmStyleColor(elm, propName);    
     }
 
-    function elmListener(elm, evtName, func, btnTxt) {
-        colorName = btnTxt;
+    function elmListener(elm, evtName, func, propName) {
+        colorName = propName;
         elm.addEventListener(evtName, func);
     }
     
