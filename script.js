@@ -64,6 +64,7 @@ function gridMain() {
                     propName = randomColor();
                     break;
             }
+            elmStyleColor(elm, propName);
         }
         else if (propName === "Clear") 
             clearGrid();
