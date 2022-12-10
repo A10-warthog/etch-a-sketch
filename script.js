@@ -26,6 +26,7 @@ function gridMain() {
         if (propName === "random")
            propName = randomColor(); 
         
+       elmStyleColor(elm, propName);    
     }
 
     function elmListener(evt, elm, evtName, func) {
