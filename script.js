@@ -36,6 +36,10 @@ function gridMain() {
         return colorName;
     }
 
+    function resizeGrid() {
+
+    }
+
     function divModify(evt) {
         let propName = colorName;
         const elm = evt.target;
