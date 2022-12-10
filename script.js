@@ -87,11 +87,11 @@ function gridMain() {
             height: xValue_int +"rem",
             width: this.height
         }
-        for(let i = 0; i < setValue; i++) {
+        for(let i = 0; i < setValue_int; i++) {
             const row = document.createElement("div");
             row.classList.add("grid__row");
             grid.appendChild(row);
-            for (let j = 0; j < setValue; j++) {
+            for (let j = 0; j < setValue_int; j++) {
                 const item = document.createElement("div");
                 item.classList.add("row__item");
                 assignCssProp(item, cssProp);
