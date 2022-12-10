@@ -19,13 +19,16 @@ function gridMain() {
         removeListener(grid, "mouseover", colorDiv);
     }
 
+    function randomColor() {
+        
+    }
+
     function colorDiv(evt) {
         let propName = colorName;
         const elm = evt.target;
         evt.preventDefault();
         if (propName === "random")
            propName = randomColor(); 
-        
        elmStyleColor(elm, propName);    
     }
 
