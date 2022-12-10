@@ -21,6 +21,7 @@ function gridMain() {
 
     function colorDiv(evt) {
         const propName = colorName;
+        const elm = evt.target;
         evt.preventDefault();
         if (propName === "random")
             elmStyleColor(elm, randomColor());
