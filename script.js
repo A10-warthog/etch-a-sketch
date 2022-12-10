@@ -41,13 +41,14 @@ function gridMain() {
     }
 
     function resizeGrid() {
+        const gridInput = document.querySelector(".grid_input");
+        let inputValue = Number(gridInput.value);
+
         function removeGrid() {
             const [...gridRow] = grid.children;
             gridRow.forEach(row => row.remove());
             createGrid(inputValue);
-        } 
-        const gridInput = document.querySelector(".grid_input");
-        let inputValue = Number(gridInput.value);
+        }
         
         if(inputValue >= 10 && inputValue <= 100)
             removeGrid();
