@@ -59,24 +59,18 @@ function gridMain() {
         const elm = evt.target;
         evt.preventDefault();
         //check button's textContent
-        if ( (/clear|resize/i).test(propName) === false ) {
-            switch(propName) {
-                case "Default":
-                    propName = "#000";
-                    break;
-                case "Eraser":
-                    propName = grid.style.backgroundColor;
-                    break;
-                case "Random":
-                    propName = "Random";
-                    break;
-            }
-            elmStyleColor(elm, propName);
+        switch(propName) {
+            case "Default":
+                propName = "#000";
+                break;
+            case "Eraser":
+                propName = grid.style.backgroundColor;
+                break;
+            case "Random":
+                propName;
+                break;
         }
-        else if (propName === "Clear") 
-            clearGrid();
-        else if (propName === "Resize") 
-            resizeGrid();
+        elmStyleColor(elm, propName);
     }
 
     function elmListener(elm, evtName, func, propName) {
