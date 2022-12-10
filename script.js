@@ -28,8 +28,11 @@ function gridMain() {
         let propName = colorName;
         const elm = evt.target;
         evt.preventDefault();
-        if (propName === "random")
-           propName = randomColor(); 
+        if (propName === "Random")
+           propName = randomColor();
+        else if (propName === "Clear") {
+            clearGrid();
+        } 
        elmStyleColor(elm, propName);    
     }
 
