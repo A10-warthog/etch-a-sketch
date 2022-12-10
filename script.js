@@ -38,7 +38,7 @@ function gridMain() {
 
     function resizeGrid() {
         function removeGrid() {
-            const gridRow = grid.children;
+            const [...gridRow] = grid.children;
             gridRow.forEach(row => row.remove());
             createGrid(inputValue);
         } 
@@ -54,7 +54,6 @@ function gridMain() {
     function divModify(evt) {
         let propName = colorName;
         const elm = evt.target;
-        console.log(elm)
         evt.preventDefault();
         //check button's textContent
         if (propName === "Eraser")
