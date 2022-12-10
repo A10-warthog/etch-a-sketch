@@ -37,7 +37,7 @@ function gridMain() {
     }
 
     function resizeGrid() {
-
+        const inputValue = document.querySelector(".grid_input").value;
     }
 
     function divModify(evt) {
