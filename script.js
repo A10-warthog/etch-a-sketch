@@ -32,6 +32,7 @@ function gridMain() {
            propName = randomColor();
         else if (propName === "Clear") {
             clearGrid();
+            propName = "#000";
         } 
        elmStyleColor(elm, propName);    
     }
