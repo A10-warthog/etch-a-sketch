@@ -52,8 +52,12 @@ function gridMain() {
         const elm = evt.target;
         evt.preventDefault();
         //check button's textContent
-        if ( (/clear|resize/i).test(propName) === false) {
-            elmStyleColor(elm, propName);    
+        if ( (/clear|resize/i).test(propName) === false ) {
+            switch(propName) {
+                case "Default":
+                    propName = "#000";
+                    break;
+            }
         }
             
         else if (propName === "Clear") 
