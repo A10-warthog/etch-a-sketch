@@ -64,8 +64,8 @@ function gridMain() {
     }
 
     function elmListener(evt, elm, evtName, func, btnTxt) {
-        if (evt.target.tagName === "button")
-            colorName = evt.target.textContent;
+        if (btnTxt !== undefined)
+            colorName = btnTxt;
         else    
             colorName = "#000";
         elm.addEventListener(evtName, func);
