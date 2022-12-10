@@ -25,15 +25,12 @@ function gridMain() {
     }
 
     function clearGrid() {
-        let colorName = "";
         const [...gridChild] = grid.children;
         gridChild.forEach( row => row.forEach( child => {
             if ( ( /\w/g ).test( child.style.backgroundColor ) === true ) {
-                colorName = child.style.backgroundColor;
                 assignCssProp(child, {"background-color": ""} );
             }
         } ) );
-        return colorName;
     }
 
     function resizeGrid() {
@@ -48,7 +45,6 @@ function gridMain() {
             removeGrid();
         else 
             console.log("Enter input value between 10 & 100");
-        return "#000";
     }
 
     function divModify(evt) {
@@ -59,9 +55,9 @@ function gridMain() {
         if (propName === "Eraser")
             propName = grid.style.backgroundColor;
         else if (propName === "Clear") 
-           propName = clearGrid();
+            clearGrid();
         else if (propName === "Resize") 
-            propName = resizeGrid();
+            resizeGrid();
        elmStyleColor(elm, propName);    
     }
 
