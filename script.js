@@ -20,6 +20,7 @@ function gridMain() {
     }
 
     function colorDiv(evt) {
+        const propName = colorName;
         evt.preventDefault();
     }
 
