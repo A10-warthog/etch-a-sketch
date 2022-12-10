@@ -95,5 +95,7 @@ function gridMain() {
     const grid = document.querySelector(".grid__body");
     const button_array = document.querySelectorAll("button");
     const colorName = grid.previousElementSibling.textContent;
+
+    button_array.forEach(button => button.addEventListener("click", gridListener))
     
 }
