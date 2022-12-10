@@ -102,7 +102,9 @@ function gridMain() {
     }
 
     createGrid();
-    
+
     button_array.forEach(button => button.addEventListener("click", gridListener))
     
 }
+
+gridMain();
