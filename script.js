@@ -57,7 +57,7 @@ function gridMain() {
             gridInput.value = '';
         }
 
-        if(inputValue >= 10 && inputValue <= 100)
+        if (inputValue >= 10 && inputValue <= 100)
             removeGrid();
         else 
             console.log("Enter input value between 10 & 100");
@@ -93,6 +93,10 @@ function gridMain() {
             clearGrid();
         else if (btnTxt === "Resize")
             resizeGrid();
+        else if (btnTxt == "Grid") {
+            toggleClass(grid, "container_grid--shadow");
+            toggleClass(item, "row__item--border")
+        }
         else
             elmListener(grid, "mousedown", divModify, btnTxt)
     }
