@@ -95,7 +95,7 @@ function gridMain() {
             resizeGrid();
         else if (btnTxt == "Grid") {
             toggleClass(grid, "container_grid--shadow");
-            toggleClass(item, "row__item--border")
+            toggleClass(item, "row__item--border");
         }
         else
             elmListener(grid, "mousedown", divModify, btnTxt)
@@ -124,7 +124,16 @@ function gridMain() {
     }
 
     createGrid();
-
+    
+    function getItem() {
+        let [...row] = grid.children;
+        let child = [];
+        row.forEach(row => {
+            const [...item] = row.children;
+            item.forEach(item => child.push(item));
+        });
+    }
+    
     button_array.forEach(button => button.addEventListener("click", btnListener))
 }
 
