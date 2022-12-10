@@ -101,6 +101,8 @@ function gridMain() {
         elmListener(grid, "mousedown", divModify);
     }
 
+    createGrid();
+    
     button_array.forEach(button => button.addEventListener("click", gridListener))
     
 }
