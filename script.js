@@ -19,7 +19,7 @@ function gridMain() {
         if (colorProp === "Random")
             assignCssProp(elm, {"background-color": randomColor()});
         else 
-        assignCssProp(elm, {"background-color": colorProp});
+            assignCssProp(elm, {"background-color": colorProp});
         elmListener(grid, "mouseover", divModify, colorProp);
         removeListener(grid, "mouseover", divModify);
     }
@@ -106,7 +106,7 @@ function gridMain() {
             }
         }
 
-        elmListener(grid, "mousedown", divModify);
+        elmListener(grid, "mousedown", divModify, "#000");
     }
 
     createGrid();
