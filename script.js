@@ -24,7 +24,7 @@ function gridMain() {
         evt.preventDefault();
     }
 
-    function elmListener(elm, evtName, func) {
+    function elmListener(evt, elm, evtName, func) {
         colorName = evt.target.textContent;
         elm.addEventListener(evtName, func);
     }
