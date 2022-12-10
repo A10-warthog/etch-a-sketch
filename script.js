@@ -23,13 +23,15 @@ function gridMain() {
         elmListener(grid, "mouseover", divModify, colorProp);
         removeListener(grid, "mouseover", divModify);
     }
-    
+
     function randomValue(range) {
         return Math.floor(Math.random() * range);
     }
 
     function randomColor() {
-        const hue = Math.floor(Math.random() * 255);
+        const red = randomValue(240);
+        const green = randomValue(240);
+        const blue = randomValue(240);
         return `hsl(${hue}, 100%, 50%)`;
     }
 
