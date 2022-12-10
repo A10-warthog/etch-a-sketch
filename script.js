@@ -40,6 +40,7 @@ function gridMain() {
 
         function removeGrid(inputValue) {
             const gridRow = grid.children;
+            gridRow.forEach(row => row.remove());
         } 
 
         const inputValue = Number(document.querySelector(".grid_input").value);
