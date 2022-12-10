@@ -46,8 +46,9 @@ function gridMain() {
             gridRow.forEach(row => row.remove());
             createGrid(inputValue);
         } 
-        let gridInput = document.querySelector(".grid_input");
-
+        const gridInput = document.querySelector(".grid_input");
+        let inputValue = Number(gridInput.value);
+        
         if(inputValue >= 10 && inputValue <= 100)
             removeGrid();
         else 
