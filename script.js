@@ -14,6 +14,8 @@ function gridMain() {
     }
 
     function elmStyleColor(elm, colorProp) {
+        if (elm === grid)
+            return;
         if (colorProp === "Random")
             assignCssProp(elm, {"background-color": randomColor()});
         else 
