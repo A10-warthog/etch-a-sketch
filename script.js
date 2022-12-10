@@ -58,19 +58,17 @@ function gridMain() {
                     propName = "#000";
                     break;
                 case "Eraser":
-                    propName = "#000";
+                    propName = grid.style.backgroundColor;
                     break;
                 case "Random":
                     propName = randomColor();
                     break;
             }
         }
-            
         else if (propName === "Clear") 
             clearGrid();
         else if (propName === "Resize") 
             resizeGrid();
-      
     }
 
     function elmListener(elm, evtName, func, propName) {
