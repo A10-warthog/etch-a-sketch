@@ -15,8 +15,8 @@ function gridMain() {
 
     function elmStyleColor(elm, colorProp) {
         assignCssProp(elm, {"background-color": colorProp});
-        elmListener(grid, "mouseover", colorDiv);
-        removeListener(grid, "mouseover", colorDiv);
+        elmListener(grid, "mouseover", divModify);
+        removeListener(grid, "mouseover", divModify);
     }
 
     function randomColor() {
@@ -32,7 +32,7 @@ function gridMain() {
         }));
     }
 
-    function colorDiv(evt) {
+    function divModify(evt) {
         let propName = colorName;
         const elm = evt.target;
         evt.preventDefault();
@@ -71,6 +71,6 @@ function gridMain() {
             }
         }
 
-        elmListener(grid, "mousedown", colorDiv);
+        elmListener(grid, "mousedown", divModify);
     }
 }
