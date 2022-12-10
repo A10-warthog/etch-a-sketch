@@ -24,7 +24,7 @@
     display: none;
 }
 
-.row__item {
+.row__item--border {
     border-top: 1px solid #9986;
     border-left: 1px solid #9996;
 }
