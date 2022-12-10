@@ -31,11 +31,13 @@ function gridMain() {
 
     function clearGrid() {
         const [...gridChild] = grid.children;
-        gridChild.forEach( row => row.forEach( child => {
-            if ( ( /\w/g ).test( child.style.backgroundColor ) === true ) {
-                assignCssProp(child, {"background-color": ""} );
-            }
-        } ) );
+        gridChild.forEach(row => {
+            const [...gridRow] = row.children;
+            gridRow.forEach(child => {
+                if ((/\w/).test(child.style.backgroundColor) === true)
+                    child.style.backgroundColor = "";
+            })
+        });
     }
 
     function resizeGrid() {
@@ -84,7 +86,12 @@ function gridMain() {
     
     function gridListener(evt) {
         const btnTxt = evt.target.textContent;
-        elmListener(grid, "mousedown", divModify, btnTxt)
+        if (btnTxt === "Clear")
+            clearGrid();
+        else if (btnTxt === "Resize")
+            resizeGrid();
+        else
+            elmListener(grid, "mousedown", divModify, btnTxt)
     }
 
     function createGrid(setValue_int = 16) {
