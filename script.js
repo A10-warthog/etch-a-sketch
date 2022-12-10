@@ -38,10 +38,11 @@ function gridMain() {
 
     function resizeGrid() {
         const inputValue = Number(document.querySelector(".grid_input").value);
-        if (inputValue > 10 && inputValue < 100)
+        if(inputValue > 10 && inputValue < 100)
             removeGrid(inputValue);
         else 
             console.log("Enter input value between 10 & 100");
+        return "#000";
     }
 
     function divModify(evt) {
