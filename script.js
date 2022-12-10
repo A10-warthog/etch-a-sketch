@@ -78,7 +78,7 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
     
-    function gridListener(evt) {
+    function btnListener(evt) {
         const btnTxt = evt.target.textContent;
         if (btnTxt === "Clear")
             clearGrid();
@@ -112,8 +112,7 @@ function gridMain() {
 
     createGrid();
 
-    button_array.forEach(button => button.addEventListener("click", gridListener))
-    
+    button_array.forEach(button => button.addEventListener("click", btnListener))
 }
 
 gridMain();
