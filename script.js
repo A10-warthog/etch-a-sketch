@@ -57,9 +57,7 @@ function gridMain() {
         console.log(elm)
         evt.preventDefault();
         //check button's textContent
-        if (propName === "Random")
-           propName = randomColor();
-        else if (propName === "Eraser")
+        if (propName === "Eraser")
             propName = grid.style.backgroundColor;
         else if (propName === "Clear") 
            propName = clearGrid();
