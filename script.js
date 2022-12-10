@@ -25,7 +25,11 @@ function gridMain() {
     }
 
     function clearGrid() {
-        
+        const [...gridChild] = grid.children;
+        gridChild.forEach(row => row.forEach(child => {
+            if ((/\w/g).test(child.style.backgroundColor) === true)
+                assignCssProp(child, {"background-color": ""});
+        }));
     }
 
     function colorDiv(evt) {
