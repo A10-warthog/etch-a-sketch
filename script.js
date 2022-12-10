@@ -60,6 +60,9 @@ function gridMain() {
                 case "Eraser":
                     propName = "#000";
                     break;
+                case "Random":
+                    propName = randomColor();
+                    break;
             }
         }
             
