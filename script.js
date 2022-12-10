@@ -10,18 +10,7 @@ function gridMain() {
     function removeListener(elm, evtName, func) {
         window.addEventListener("mouseup", () => {
             elm.removeEventListener(evtName, func);
-        })
-    }
-
-    function elmStyleColor(elm, colorProp) {
-        if (elm === grid)
-            return;
-        if (colorProp === "Random")
-            assignCssProp(elm, {"background-color": randomColor()});
-        else 
-            assignCssProp(elm, {"background-color": colorProp});
-        elmListener(grid, "mouseover", divModify, colorProp);
-        removeListener(grid, "mouseover", divModify);
+        });
     }
 
     function randomValue(range) {
@@ -33,6 +22,17 @@ function gridMain() {
         const green = randomValue(240);
         const blue = randomValue(240);
         return `rgb(${red}, ${green}, ${blue})`;
+    }
+
+    function elmStyleColor(elm, colorProp) {
+        if (elm === grid)
+            return;
+        if (colorProp === "Random")
+            assignCssProp(elm, {"background-color": randomColor()});
+        else 
+            assignCssProp(elm, {"background-color": colorProp});
+        elmListener(grid, "mouseover", divModify, colorProp);
+        removeListener(grid, "mouseover", divModify);
     }
 
     function clearGrid() {
