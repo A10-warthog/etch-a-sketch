@@ -52,13 +52,15 @@ function gridMain() {
         const elm = evt.target;
         evt.preventDefault();
         //check button's textContent
-        if (propName === "Eraser")
-            propName = grid.style.backgroundColor;
+        if ( (/clear|resize/i).test(propName) === false) {
+            elmStyleColor(elm, propName);    
+        }
+            
         else if (propName === "Clear") 
             clearGrid();
         else if (propName === "Resize") 
             resizeGrid();
-       elmStyleColor(elm, propName);    
+      
     }
 
     function elmListener(elm, evtName, func, propName) {
