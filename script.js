@@ -45,13 +45,10 @@ function gridMain() {
            propName = randomColor();
         else if (propName === "Eraser")
             propName = grid.style.backgroundColor;
-        else if (propName === "Clear") {
-            clearGrid();
-            propName = "#000";
-        } else if (propName === "Resize") {
+        else if (propName === "Clear") 
+           propName = clearGrid();
+        else if (propName === "Resize") 
             propName = resizeGrid();
-        }
-
        elmStyleColor(elm, propName);    
     }
 
