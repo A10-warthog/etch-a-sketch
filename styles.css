@@ -5,8 +5,8 @@
 .container_grid {
     width: 30rem;
     height: 30rem;
+    background-color: #eee;
     margin: auto;
-    box-shadow: 0 0 0 1px #acd;
 }
 
 .grid__body {
@@ -24,7 +24,7 @@
     display: none;
 }
 
-.row__item--border {
+.row__item {
     border-top: 1px solid #9986;
     border-left: 1px solid #9996;
 }
