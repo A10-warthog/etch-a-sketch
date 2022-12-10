@@ -54,6 +54,7 @@ function gridMain() {
     function divModify(evt) {
         let propName = colorName;
         const elm = evt.target;
+        console.log(elm)
         evt.preventDefault();
         //check button's textContent
         if (propName === "Random")
@@ -85,7 +86,7 @@ function gridMain() {
         const xValue_int = gridWidth_int / setValue_int;
         const cssProp = {
             height: xValue_int +"rem",
-            width: this.height
+            width: xValue_int +"rem"
         }
         for(let i = 0; i < setValue_int; i++) {
             const row = document.createElement("div");
