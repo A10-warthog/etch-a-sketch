@@ -66,7 +66,7 @@ function gridMain() {
                     propName = grid.style.backgroundColor;
                     break;
                 case "Random":
-                    propName = randomColor();
+                    propName = "Random";
                     break;
             }
             elmStyleColor(elm, propName);
