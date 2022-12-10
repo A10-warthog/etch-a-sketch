@@ -32,7 +32,7 @@ function gridMain() {
         const red = randomValue(240);
         const green = randomValue(240);
         const blue = randomValue(240);
-        return `hsl(${hue}, 100%, 50%)`;
+        return `rgb(${red}, ${green}, ${blue})`;
     }
 
     function clearGrid() {
