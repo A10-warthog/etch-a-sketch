@@ -63,7 +63,7 @@ function gridMain() {
        elmStyleColor(elm, propName);    
     }
 
-    function elmListener(evt, elm, evtName, func) {
+    function elmListener(evt, elm, evtName, func, btnTxt) {
         if (evt.target.tagName === "button")
             colorName = evt.target.textContent;
         else    
@@ -94,7 +94,7 @@ function gridMain() {
 
     function gridListener(evt) {
         const btnTxt = evt.target.textContent;
-        elmListener(grid, "mousedown", divModify)
+        elmListener(grid, "mousedown", divModify, btnTxt)
     }
 
     const grid = document.querySelector(".grid__body");
