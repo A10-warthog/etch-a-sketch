@@ -87,8 +87,8 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
 
-    function toggleClass(elm, className) {
-        elm.forEach(elm => elm.classList.toggle(className));
+    function toggleClass(elm, cssPropName) {
+        elm.forEach(elm => assignCssProp(elm, cssPropName));
     }
 
     function getItem() {
@@ -108,9 +108,9 @@ function gridMain() {
         else if (btnTxt === "Resize")
             resizeGrid();
         else if (btnTxt == "Grid") 
-            toggleClass(getItem(), "row__item--border");
+            toggleClass(getItem());
         else
-            elmListener(grid, "mousedown", divModify, btnTxt)
+            elmListener(grid, "mousedown", divModify, btnTxt);
     }
 
     function createGrid(setValue_int = 16) {
@@ -118,7 +118,7 @@ function gridMain() {
         const xValue_int = gridWidth_int / setValue_int;
         const cssProp = {
             height: xValue_int +"rem",
-            width: xValue_int +"rem"
+            width: xValue_int +"rem",
         }
         for(let i = 0; i < setValue_int; i++) {
             const row = document.createElement("div");
