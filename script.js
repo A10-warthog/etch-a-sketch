@@ -87,7 +87,7 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
 
-    function toggleClass(elm, cssPropName) {
+    function itemProp(elm, cssPropName) {
         elm.forEach(elm => assignCssProp(elm, cssPropName));
     }
 
@@ -108,7 +108,7 @@ function gridMain() {
         else if (btnTxt === "Resize")
             resizeGrid();
         else if (btnTxt == "Grid") 
-            toggleClass(getItem());
+            itemProp(getItem());
         else
             elmListener(grid, "mousedown", divModify, btnTxt);
     }
