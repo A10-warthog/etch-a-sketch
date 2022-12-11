@@ -2,7 +2,7 @@ function gridMain() {
     const grid = document.querySelector(".grid__body");
     const button_array = document.querySelectorAll("button");
     let colorName = grid.previousElementSibling.textContent;
-    let errorText = document.querySelector(".input__error"); 
+    let errorMsg = document.querySelector(".input__error"); 
 
     function assignCssProp(elm, cssProp) {
         Object.assign(elm.style, cssProp);
@@ -60,9 +60,9 @@ function gridMain() {
 
         if (inputValue >= 10 && inputValue <= 100) {
             removeGrid();
-            errorText.textContent = "";
+            errorMsg.textContent = "";
         } else
-            errorText.textContent = "Enter input value between 10 & 100"; 
+            errorMsg.textContent = "Enter input value between 10 & 100"; 
         
     }
 
