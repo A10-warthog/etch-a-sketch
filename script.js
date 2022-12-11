@@ -132,6 +132,7 @@ function gridMain() {
             const [...item] = row.children;
             item.forEach(item => child.push(item));
         });
+        return child;
     }
     
     button_array.forEach(button => button.addEventListener("click", btnListener))
