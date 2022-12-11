@@ -119,8 +119,6 @@ function gridMain() {
         const cssProp = {
             height: xValue_int +"rem",
             width: xValue_int +"rem",
-            "border-top": "1px solid #9996",
-            "border-left": "1px solid #9996"
         }
         for(let i = 0; i < setValue_int; i++) {
             const row = document.createElement("div");
