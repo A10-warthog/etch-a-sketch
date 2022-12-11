@@ -108,7 +108,8 @@ function gridMain() {
         else if (btnTxt === "Resize")
             resizeGrid();
         else if (btnTxt == "Grid") 
-            itemProp(getItem());
+            itemProp(getItem(), {"border-top": "1px solid #9995",
+                                 "border-left": "1px solid #9995"});
         else
             elmListener(grid, "mousedown", divModify, btnTxt);
     }
