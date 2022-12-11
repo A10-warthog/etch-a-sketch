@@ -96,7 +96,7 @@ function gridMain() {
         });
         return child;
     }
-    
+
     function btnListener(evt) {
         const btnTxt = evt.target.textContent;
         if (btnTxt === "Clear")
@@ -104,8 +104,8 @@ function gridMain() {
         else if (btnTxt === "Resize")
             resizeGrid();
         else if (btnTxt == "Grid") {
-            toggleClass(grid, "container_grid--shadow");
-            toggleClass(item, "row__item--border");
+            toggleClass(grid, "grid__body--shadow");
+            toggleClass(getItem(), "row__item--border");
         }
         else
             elmListener(grid, "mousedown", divModify, btnTxt)
@@ -129,7 +129,6 @@ function gridMain() {
                 row.appendChild(item);
             }
         }
-
         elmListener(grid, "mousedown", divModify, "#000");
     }
 
