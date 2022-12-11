@@ -69,6 +69,11 @@
     width: 2.75rem;
 }
 
+.grid_input--txt {
+    font-family: Delius;
+    font-weight: 600;
+}
+
 .input__error {
     width: 100%;
 }
@@ -78,4 +83,9 @@
     color: red;
     font-size: 1.01rem;
     font-family: Helvetica;
+}
+
+.btn--txt {
+    font-family: Delius;
+    font-weight: 600;
 }
