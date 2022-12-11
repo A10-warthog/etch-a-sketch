@@ -59,6 +59,7 @@
 .button_btn--flex {
     display: flex;
     justify-content: flex-end;
+    gap: 0.3rem;
 }
 
 .grid_input {
