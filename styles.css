@@ -71,5 +71,6 @@
 }
 
 .error--txt {
+    text-align: center;
     color: red;
 }
