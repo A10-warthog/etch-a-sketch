@@ -58,10 +58,12 @@ function gridMain() {
             gridInput.value = '';
         }
 
-        if (inputValue >= 10 && inputValue <= 100)
+        if (inputValue >= 10 && inputValue <= 100) {
             removeGrid();
-        else 
-            errorText.textContent = "Enter input value between 10 & 100";
+            errorText.textContent = "";
+        } else
+            errorText.textContent = "Enter input value between 10 & 100"; 
+        
     }
 
     function divModify(evt) {
