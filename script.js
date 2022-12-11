@@ -86,6 +86,16 @@ function gridMain() {
         colorName = propName;
         elm.addEventListener(evtName, func);
     }
+
+    function getItem() {
+        let [...row] = grid.children;
+        let child = [];
+        row.forEach(row => {
+            const [...item] = row.children;
+            item.forEach(item => child.push(item));
+        });
+        return child;
+    }
     
     function btnListener(evt) {
         const btnTxt = evt.target.textContent;
@@ -124,16 +134,6 @@ function gridMain() {
     }
 
     createGrid();
-    
-    function getItem() {
-        let [...row] = grid.children;
-        let child = [];
-        row.forEach(row => {
-            const [...item] = row.children;
-            item.forEach(item => child.push(item));
-        });
-        return child;
-    }
     
     button_array.forEach(button => button.addEventListener("click", btnListener))
 }
