@@ -107,10 +107,8 @@ function gridMain() {
             clearGrid();
         else if (btnTxt === "Resize")
             resizeGrid();
-        else if (btnTxt == "Grid") {
-            toggleClass([grid], "grid__body--shadow");
+        else if (btnTxt == "Grid") 
             toggleClass(getItem(), "row__item--border");
-        }
         else
             elmListener(grid, "mousedown", divModify, btnTxt)
     }
