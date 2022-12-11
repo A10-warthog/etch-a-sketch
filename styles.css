@@ -44,3 +44,9 @@
     border-top: 1px solid #9986;
     border-left: 1px solid #9996;
 }
+
+.button_btn--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
