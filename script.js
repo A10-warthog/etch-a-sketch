@@ -2,6 +2,7 @@ function gridMain() {
     const grid = document.querySelector(".grid__body");
     const button_array = document.querySelectorAll("button");
     let colorName = grid.previousElementSibling.textContent;
+    let errorText = document.querySelector(".input__error"); 
 
     function assignCssProp(elm, cssProp) {
         Object.assign(elm.style, cssProp);
