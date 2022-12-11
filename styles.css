@@ -45,6 +45,10 @@
     border-left: 1px solid #9996;
 }
 
+.button {
+    margin-top: 0.5rem;
+}
+
 .button--flex {
     display: flex;
     flex-wrap: wrap;
