@@ -61,6 +61,10 @@
     justify-content: flex-end;
 }
 
+.grid_input {
+    width: 2.75rem;
+}
+
 .input__error {
     width: 100%;
 }
