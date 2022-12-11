@@ -107,8 +107,11 @@ function gridMain() {
             clearGrid();
         else if (btnTxt === "Resize")
             resizeGrid();
-        else if (btnTxt == "Grid") 
+        else if (btnTxt == "Grid") {
             toggleClass(getItem(), "row__item--border");
+            toggleClass([grid], "grid__body--shadow--ve");
+        }
+           
         else
             elmListener(grid, "mousedown", divModify, btnTxt);
     }
@@ -136,7 +139,7 @@ function gridMain() {
 
     createGrid();
     
-    button_array.forEach(button => button.addEventListener("click", btnListener))
+    button_array.forEach(button => button.addEventListener("click", btnListener));
 }
 
 gridMain();
