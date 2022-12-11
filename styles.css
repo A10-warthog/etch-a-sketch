@@ -1,3 +1,7 @@
+.heading--txt {
+    text-align: center;
+}
+
 .container_grid, .grid__body, .row__item {
     box-sizing: border-box;
 }
