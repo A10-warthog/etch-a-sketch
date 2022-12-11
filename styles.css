@@ -45,7 +45,18 @@
     border-left: 1px solid #9996;
 }
 
+.button--flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between
+}
+
 .button_btn--flex {
     display: flex;
     justify-content: flex-end;
+}
+
+.input__error {
+    width: 100%;
 }
