@@ -47,6 +47,5 @@
 
 .button_btn--flex {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
 }
