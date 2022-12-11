@@ -87,8 +87,8 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
 
-    function toggleClass(elm) {
-        
+    function toggleClass(elm, className) {
+        elm.forEach(elm => elm.classList.toggle(className));
     }
 
     function getItem() {
