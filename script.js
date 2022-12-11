@@ -87,8 +87,8 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
 
-    function itemProp(elm, cssPropName) {
-        elm.forEach(elm => assignCssProp(elm, cssPropName));
+    function toggleClass(elm, className) {
+        elm.forEach(elm => elm.classList.toggle(className));
     }
 
     function getItem() {
@@ -108,8 +108,7 @@ function gridMain() {
         else if (btnTxt === "Resize")
             resizeGrid();
         else if (btnTxt == "Grid") 
-            itemProp(getItem(), {"border-top": "1px solid #9995",
-                                 "border-left": "1px solid #9995"});
+            toggleClass(getItem(), "row__item--border");
         else
             elmListener(grid, "mousedown", divModify, btnTxt);
     }
@@ -120,6 +119,8 @@ function gridMain() {
         const cssProp = {
             height: xValue_int +"rem",
             width: xValue_int +"rem",
+            "border-top": "1px solid #9996",
+            "border-left": "1px solid #9996"
         }
         for(let i = 0; i < setValue_int; i++) {
             const row = document.createElement("div");
