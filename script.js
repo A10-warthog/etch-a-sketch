@@ -87,6 +87,10 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
 
+    function toggleClass(elm) {
+        
+    }
+
     function getItem() {
         let [...row] = grid.children;
         let child = [];
@@ -104,7 +108,7 @@ function gridMain() {
         else if (btnTxt === "Resize")
             resizeGrid();
         else if (btnTxt == "Grid") {
-            toggleClass(grid, "grid__body--shadow");
+            toggleClass([grid], "grid__body--shadow");
             toggleClass(getItem(), "row__item--border");
         }
         else
