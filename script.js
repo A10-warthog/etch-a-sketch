@@ -4,14 +4,14 @@ function gridMain() {
     let colorName = grid.previousElementSibling.textContent;
     let errorMsg = document.querySelector(".input__error"); 
 
-    function assignCssProp(elm, cssProp) {
-        Object.assign(elm.style, cssProp);
-    }
-
     function removeListener(elm, evtName, func) {
         window.addEventListener("mouseup", () => {
             elm.removeEventListener(evtName, func);
         });
+    }
+
+    function assignCssProp(elm, cssProp) {
+        Object.assign(elm.style, cssProp);
     }
 
     function randomValue(range) {
@@ -34,38 +34,6 @@ function gridMain() {
             assignCssProp(elm, {"background-color": colorProp});
         elmListener(grid, "mouseover", divModify, colorProp);
         removeListener(grid, "mouseover", divModify);
-    }
-
-    function clearGrid() {
-        const [...gridChild] = grid.children;
-        gridChild.forEach(row => {
-            const [...gridRow] = row.children;
-            gridRow.forEach(child => {
-                if ((/\w/).test(child.style.backgroundColor) === true)
-                    child.style.backgroundColor = "";
-            })
-        });
-    }
-
-    function resizeGrid() {
-        const gridInput = document.querySelector(".grid_input");
-        let inputValue = Number(gridInput.value);
-
-        function removeGrid() {
-            const [...gridRow] = grid.children;
-            gridRow.forEach(row => row.remove());
-            createGrid(inputValue);
-            gridInput.value = '';
-            if((/--border/).test(getItem()[0].getAttribute("class")) === false)
-                if ((/--ve/).test(grid.getAttribute("class")) === false)
-                toggleClass([grid], "grid__body--shadow--ve");
-        }
-
-        if (inputValue >= 10 && inputValue <= 100) 
-            removeGrid();
-        else 
-            errorMsg.textContent = "Enter input value between 10 & 100";
-        setTimeout(()=> {errorMsg.textContent = "";}, 2000);
     }
 
     function divModify(evt) {
@@ -92,10 +60,6 @@ function gridMain() {
         elm.addEventListener(evtName, func);
     }
 
-    function toggleClass(elm, className) {
-        elm.forEach(elm => elm.classList.toggle(className));
-    }
-
     function getItem() {
         let [...row] = grid.children;
         let child = [];
@@ -104,6 +68,40 @@ function gridMain() {
             item.forEach(item => child.push(item));
         });
         return child;
+    }
+
+    function clearGrid() {
+        const [...gridChild] = grid.children;
+        gridChild.forEach(row => {
+            const [...gridRow] = row.children;
+            gridRow.forEach(child => {
+                if ((/\w/).test(child.style.backgroundColor) === true)
+                    child.style.backgroundColor = "";
+            })
+        });
+    }
+
+    function toggleClass(elm, className) {
+        elm.forEach(elm => elm.classList.toggle(className));
+    }
+
+    function resizeGrid() {
+        const gridInput = document.querySelector(".grid_input");
+        let inputValue = Number(gridInput.value);
+        function removeGrid() {
+            const [...gridRow] = grid.children;
+            gridRow.forEach(row => row.remove());
+            createGrid(inputValue);
+            gridInput.value = '';
+            if((/--border/).test(getItem()[0].getAttribute("class")) === false)
+                if ((/--ve/).test(grid.getAttribute("class")) === false)
+                    toggleClass([grid], "grid__body--shadow--ve");
+        }
+        if (inputValue >= 10 && inputValue <= 100) 
+            removeGrid();
+        else 
+            errorMsg.textContent = "Enter input value between 10 & 100";
+        setTimeout(()=> {errorMsg.textContent = "";}, 2000);
     }
 
     function btnListener(evt) {
@@ -139,9 +137,8 @@ function gridMain() {
         }
         elmListener(grid, "mousedown", divModify, "#000");
     }
-
     createGrid();
-    
+
     button_array.forEach(button => button.addEventListener("click", btnListener));
 }
 
