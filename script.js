@@ -56,6 +56,9 @@ function gridMain() {
             gridRow.forEach(row => row.remove());
             createGrid(inputValue);
             gridInput.value = '';
+            if((/--border/).test(getItem()[0].getAttribute("class")) === false)
+                if ((/--ve/).test(grid.getAttribute("class")) === false)
+                toggleClass([grid], "grid__body--shadow--ve");
         }
 
         if (inputValue >= 10 && inputValue <= 100) 
@@ -110,11 +113,9 @@ function gridMain() {
         else if (btnTxt === "Resize")
             resizeGrid();
         else if (btnTxt == "Grid") {
-            toggleClass(getItem(), "row__item--border");
             toggleClass([grid], "grid__body--shadow--ve");
-        }
-           
-        else
+            toggleClass(getItem(), "row__item--border");
+        } else
             elmListener(grid, "mousedown", divModify, btnTxt);
     }
 
